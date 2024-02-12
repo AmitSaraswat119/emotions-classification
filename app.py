@@ -38,4 +38,5 @@ def classify_emotion():
     return render_template('index.html', emotion=emotion_label)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    webbrowser.open('http://127.0.0.1:5000')
+    app.run(debug=True , port=5000)
