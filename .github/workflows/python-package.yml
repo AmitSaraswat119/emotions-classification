@@ -42,19 +42,5 @@ jobs:
         python app.py &
         sleep 5
 
-    - name: Download ngrok
-      run: |
-        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-        unzip ngrok-stable-linux-amd64.zip
-
-    - name: Start ngrok
-      run: |
-        ./ngrok http 5000
-
-    - name: Get ngrok URL
-      run: |
-        NGROK_URL=$(curl -s http://localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
-        echo "Ngrok URL: $NGROK_URL"
-
 
 
