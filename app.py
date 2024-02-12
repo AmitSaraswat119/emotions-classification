@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from keras.models import load_model
 import numpy as np
 import spacy
+import webbrowser
 
 nlp = spacy.load("en_core_web_lg")
 spacy.prefer_gpu()
